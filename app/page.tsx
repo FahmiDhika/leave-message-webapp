@@ -1,5 +1,3 @@
-"use server"
-
 import { IPost } from "./types";
 import { BASE_API_URL } from "@/global";
 import { get } from "@/lib/api-bridge";
