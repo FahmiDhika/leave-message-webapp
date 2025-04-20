@@ -32,6 +32,8 @@ const colorVariants = [
   "bg-indigo-100",
 ];
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const message: IPost[] = await getAllMessage();
 
