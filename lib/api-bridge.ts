@@ -7,7 +7,7 @@ const axiosInstance = axios.create({
 
 export const get = async (url: string) => {
   try {
-    let result = await axiosInstance.get(url);
+    const result = await axiosInstance.get(url);
     return {
       status: true,
       data: result.data,
@@ -31,9 +31,7 @@ export const get = async (url: string) => {
 
 export const newPost = async (url: string, data: string | FormData) => {
   try {
-    const typed: string =
-      typeof data == "string" ? "application/json" : "multipart/form-data";
-    let result = await axiosInstance.post(url, data, {});
+    const result = await axiosInstance.post(url, data, {});
     return {
       status: true,
       data: result.data,
